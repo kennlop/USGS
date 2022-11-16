@@ -1,0 +1,82 @@
+:root {
+    --background-color: black;
+    --border-color:white
+  }
+  
+  body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin:0px;
+    overflow: hidden;
+  }
+  
+  h1,h2,h3,a,p, span{
+    font-family: 'Quicksand', sans-serif;
+    color: white; 
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  nav{
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    /*border-bottom: 1px solid var(--border-color);*/
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+  }
+  
+  nav > .nav-section{
+    /*padding: height var, horizontal var*/
+    padding: 1.8vh 2rem;
+    display: flex;
+    gap: 5rem; 
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nav-logo{
+    justify-content:flex-start;
+  }
+  
+  #nav-logo,
+  #nav-links{
+    flex-basis:calc(100%/3);
+  }
+  
+  #nav-contact{
+    /*this line makes the last nav section to grow to consume the remaining space in the navbar */
+    flex-grow: 1;
+  }
+  
+  /*Makes calculating the padding disregard the extra padding/borders*/
+  * {
+    box-sizing:border-box;
+  }
+  
+  .image{
+    width: 40vmin;
+    position: absolute;
+    transform: translate(-50%, -50%)
+  }
+  .image[data-status="inactive"]{
+    display:none;
+  }
+  .image[data-status="active"]{
+    display:block;
+  }
+  
+  .image-section{
+    position:relative;
+    overflow:hidden;
+    height:93vh;
+    margin:0px;
+    border:1px solid var(--border-color);
+    background-color:black;
+  }
