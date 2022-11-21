@@ -24,7 +24,7 @@ const handleOnMove = e => {
   if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 18)) {
     /*Determining length of the image snake*/
     const lead = images[globalIndex % images.length],
-          tail = images[(globalIndex - 10) % images.length];
+          tail = images[(globalIndex - 6) % images.length];
     
     /*changing the lead image after proper mmouse distance*/
     activate(lead, e.clientX, e.clientY);
