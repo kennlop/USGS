@@ -36,7 +36,7 @@ const handleOnMove = e => {
     /*Frame counter increments at the same rate as globalIndex but resets when it reaches the last frame of the fightscene*/
     frameNum++;
     document.getElementById("frame").innerHTML = frameNum;
-    if (frameNum>53) frameNum-=54
+    if (frameNum>20) frameNum-=21
   }  
 }
 
